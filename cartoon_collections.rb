@@ -17,9 +17,5 @@ end
 def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
-  cheese_present = nil
-  if array.include?("cheddar")
-    cheese_present = "cheddar"
-  end
-  return cheese_present
+  array.find { |maybe_cheese| cheese_types.include?(maybe_cheese) }
 end
